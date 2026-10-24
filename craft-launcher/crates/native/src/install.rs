@@ -1103,22 +1103,7 @@ pub(crate) mod linux {
 
     /// The app's 128 px icon, as bundled in `assets/app-icons`.
     fn icon_png(app: &CraftApp) -> Option<&'static [u8]> {
-        Some(match app.id {
-            "photocraft" => include_bytes!("../../../assets/app-icons/photocraft.png"),
-            "vectorcraft" => include_bytes!("../../../assets/app-icons/vectorcraft.png"),
-            "filmcraft" => include_bytes!("../../../assets/app-icons/filmcraft.png"),
-            "lightcraft" => include_bytes!("../../../assets/app-icons/lightcraft.png"),
-            "pdfcraft" => include_bytes!("../../../assets/app-icons/pdfcraft.png"),
-            "effectcraft" => include_bytes!("../../../assets/app-icons/effectcraft.png"),
-            "designcraft" => include_bytes!("../../../assets/app-icons/designcraft.png"),
-            "wordcraft" => include_bytes!("../../../assets/app-icons/wordcraft.png"),
-            "deckcraft" => include_bytes!("../../../assets/app-icons/deckcraft.png"),
-            "gridcraft" => include_bytes!("../../../assets/app-icons/gridcraft.png"),
-            "cadcraft" => include_bytes!("../../../assets/app-icons/cadcraft.png"),
-            "soundcraft" => include_bytes!("../../../assets/app-icons/soundcraft.png"),
-            "figcraft" => include_bytes!("../../../assets/app-icons/figcraft.png"),
-            _ => return None,
-        })
+        artcraft_launcher_core::catalog::app_icon_png(app.id)
     }
 
     fn desktop_path(data: &Path, app: &CraftApp) -> PathBuf {
@@ -2556,21 +2541,33 @@ mod tests {
             app
         }
 
-        /// A release-style disk image holding a `PhotoCraft.app` that reports `version`.
+        /// A release-style disk image holding a `PhotoCraft.app` that reports `version`. The
+        /// disk-image helper turns requests away while it is busy (`attach` retries for the same
+        /// reason), so `hdiutil create` is tried a few times, and what it said is kept for the
+        /// failure message.
         fn dmg(dir: &Path, version: &str) -> PathBuf {
             let src = dir.join(format!("src-{version}"));
             bundle(&src, version);
             let dmg = dir.join(format!("photocraft-{version}-macos-universal.dmg"));
             let _one_at_a_time = super::macos::DISK_IMAGES.lock().unwrap_or_else(std::sync::PoisonError::into_inner);
-            let ok = std::process::Command::new("hdiutil")
-                .args(["create", "-quiet", "-format", "UDZO", "-volname", "PhotoCraft", "-srcfolder"])
-                .arg(&src)
-                .arg(&dmg)
-                .status()
-                .unwrap()
-                .success();
-            assert!(ok, "hdiutil create failed");
-            dmg
+            let mut said = String::new();
+            for attempt in 0..5u64 {
+                if attempt > 0 {
+                    std::thread::sleep(std::time::Duration::from_millis(400 * attempt));
+                    let _ = std::fs::remove_file(&dmg);
+                }
+                let output = std::process::Command::new("hdiutil")
+                    .args(["create", "-quiet", "-format", "UDZO", "-volname", "PhotoCraft", "-srcfolder"])
+                    .arg(&src)
+                    .arg(&dmg)
+                    .output()
+                    .unwrap();
+                if output.status.success() {
+                    return dmg;
+                }
+                said = String::from_utf8_lossy(&output.stderr).trim().to_string();
+            }
+            panic!("hdiutil create failed after 5 tries: {said}");
         }
 
         #[test]

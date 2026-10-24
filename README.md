@@ -27,7 +27,7 @@ A collection of 18 projects from [storytold](https://github.com/storytold), comb
 
 ## Import details
 
-Imported on October 24, 2026 from each project's `main` branch. These are source snapshots; upstream commit histories, other branches, releases, issues, and pull requests are not imported. See [sources.json](sources.json) for the exact upstream commits and Git tree identifiers.
+Initially imported on October 24, 2026 from each project's `main` branch. Individual projects can be refreshed independently; [sources.json](sources.json) records the current upstream commits, Git tree identifiers, and any refresh dates. These are source snapshots; upstream commit histories, other branches, releases, issues, and pull requests are not imported.
 
 Each project keeps its own build and usage instructions. Refer to the README and other documentation within its folder. This collection does not add a shared build system or change project source code. Workflows inside project folders are retained as source files; GitHub Actions only discovers workflows in the repository root's `.github/workflows/` directory.
 

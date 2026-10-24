@@ -15,10 +15,11 @@
                         "name":  "cadcraft",
                         "repository":  "https://github.com/storytold/cadcraft",
                         "branch":  "main",
-                        "commit":  "7bf5905ac97316a7896de8cbc12d243f57b09bd8",
-                        "tree":  "e0011c04cb329bfc94cab130d42cb25b7f6e84de",
-                        "files":  765,
-                        "directory":  "cadcraft"
+                        "commit":  "a0dced6d458fc83e05ce14aceaac8b2614204c50",
+                        "tree":  "a2d0801404e6a27afd6cd8f765f5768d3d6a2401",
+                        "files":  778,
+                        "directory":  "cadcraft",
+                        "refreshed_on":  "2026-10-24"
                     },
                     {
                         "name":  "craft-fonts",
@@ -33,10 +34,11 @@
                         "name":  "craft-launcher",
                         "repository":  "https://github.com/storytold/craft-launcher",
                         "branch":  "main",
-                        "commit":  "5752c9d881d3ccf28733bfc868c7cd241a121779",
-                        "tree":  "408bc33ef44d76474a4fcccff8866ecfaa8b3d3e",
-                        "files":  216,
-                        "directory":  "craft-launcher"
+                        "commit":  "c8870ccf8c6d8cde1dc8d598c18cdf3a35075e14",
+                        "tree":  "4e1b81c3a8087264d24902276273a3991e2ba3c0",
+                        "files":  217,
+                        "directory":  "craft-launcher",
+                        "refreshed_on":  "2026-10-24"
                     },
                     {
                         "name":  "craft-launcher-assets",
