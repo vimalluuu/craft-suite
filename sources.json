@@ -1,0 +1,168 @@
+{
+    "imported_on":  "2026-10-24",
+    "import_mode":  "default-branch source snapshots",
+    "sources":  [
+                    {
+                        "name":  "artcraft-services",
+                        "repository":  "https://github.com/storytold/artcraft-services",
+                        "branch":  "main",
+                        "commit":  "e57ee3d63ac478a24149384bf1473ef97aa067f8",
+                        "tree":  "1834f0448070bc21e5fb5bac45b94361d9f42e8b",
+                        "files":  17580,
+                        "directory":  "artcraft-services"
+                    },
+                    {
+                        "name":  "cadcraft",
+                        "repository":  "https://github.com/storytold/cadcraft",
+                        "branch":  "main",
+                        "commit":  "7bf5905ac97316a7896de8cbc12d243f57b09bd8",
+                        "tree":  "e0011c04cb329bfc94cab130d42cb25b7f6e84de",
+                        "files":  765,
+                        "directory":  "cadcraft"
+                    },
+                    {
+                        "name":  "craft-fonts",
+                        "repository":  "https://github.com/storytold/craft-fonts",
+                        "branch":  "main",
+                        "commit":  "fff559f5f038112a4135e95c720161d4d0a5b335",
+                        "tree":  "2d36f71ca27a1e1a8a89519d29bbbb0493554bed",
+                        "files":  37,
+                        "directory":  "craft-fonts"
+                    },
+                    {
+                        "name":  "craft-launcher",
+                        "repository":  "https://github.com/storytold/craft-launcher",
+                        "branch":  "main",
+                        "commit":  "5752c9d881d3ccf28733bfc868c7cd241a121779",
+                        "tree":  "408bc33ef44d76474a4fcccff8866ecfaa8b3d3e",
+                        "files":  216,
+                        "directory":  "craft-launcher"
+                    },
+                    {
+                        "name":  "craft-launcher-assets",
+                        "repository":  "https://github.com/storytold/craft-launcher-assets",
+                        "branch":  "main",
+                        "commit":  "8619bdedefbddd71963ec3de872d7baa98b289ab",
+                        "tree":  "53bd30d91c82f0d59deab1391a62fd1cd23f7b91",
+                        "files":  42,
+                        "directory":  "craft-launcher-assets"
+                    },
+                    {
+                        "name":  "craft-libs",
+                        "repository":  "https://github.com/storytold/craft-libs",
+                        "branch":  "main",
+                        "commit":  "2eca9b3a53a98ac52efed2a27353c6a6927ead10",
+                        "tree":  "df7c8307a49c2bac619201924b81334f3161795a",
+                        "files":  618,
+                        "directory":  "craft-libs"
+                    },
+                    {
+                        "name":  "deckcraft",
+                        "repository":  "https://github.com/storytold/deckcraft",
+                        "branch":  "main",
+                        "commit":  "5fadda5ecfda00e11e364f095a31974f54857e21",
+                        "tree":  "988651847e536030cf57b1190be5b36b03b6bba1",
+                        "files":  572,
+                        "directory":  "deckcraft"
+                    },
+                    {
+                        "name":  "designcraft",
+                        "repository":  "https://github.com/storytold/designcraft",
+                        "branch":  "main",
+                        "commit":  "d8d78851729a2c1a10e5bfad7c591f3de78651a0",
+                        "tree":  "b91a0434ef999120bf99a73c04208e011eccec16",
+                        "files":  613,
+                        "directory":  "designcraft"
+                    },
+                    {
+                        "name":  "effectcraft",
+                        "repository":  "https://github.com/storytold/effectcraft",
+                        "branch":  "main",
+                        "commit":  "eb5108786b90bf994a6abe4e6c0b2614c6aeaa29",
+                        "tree":  "1caaa17fde68fde2aea42f1598c230d1aac76e26",
+                        "files":  1154,
+                        "directory":  "effectcraft"
+                    },
+                    {
+                        "name":  "figcraft",
+                        "repository":  "https://github.com/storytold/figcraft",
+                        "branch":  "main",
+                        "commit":  "3476f4b1e72e31514670ceff9c1a5a3d78a8b302",
+                        "tree":  "4a4c29b86207c16fcf458dcd16b9baffe12871b3",
+                        "files":  1027,
+                        "directory":  "figcraft"
+                    },
+                    {
+                        "name":  "filmcraft",
+                        "repository":  "https://github.com/storytold/filmcraft",
+                        "branch":  "main",
+                        "commit":  "fa550ce2d07bdfee6b1d7b6835e8abc8c6913d00",
+                        "tree":  "7e8e66723a2e7406e4f16b41a016ffeab27e9ea6",
+                        "files":  1402,
+                        "directory":  "filmcraft"
+                    },
+                    {
+                        "name":  "gridcraft",
+                        "repository":  "https://github.com/storytold/gridcraft",
+                        "branch":  "main",
+                        "commit":  "b8771d51fb4da60bd48c13cf313d6d6014dc5e66",
+                        "tree":  "886bab2c0693514b787300cb0dc70c9c4952e6af",
+                        "files":  505,
+                        "directory":  "gridcraft"
+                    },
+                    {
+                        "name":  "lightcraft",
+                        "repository":  "https://github.com/storytold/lightcraft",
+                        "branch":  "main",
+                        "commit":  "4ae3089420cb57d4c839e51a735d4f48271cbf17",
+                        "tree":  "54e5c3b46fd4b32ad94306a7dfc368f5a8282d7c",
+                        "files":  1043,
+                        "directory":  "lightcraft"
+                    },
+                    {
+                        "name":  "pdfcraft",
+                        "repository":  "https://github.com/storytold/pdfcraft",
+                        "branch":  "main",
+                        "commit":  "0b670caf4a090e9d83a7f41a84b4cb2144a2d33e",
+                        "tree":  "ec7e5de4cf805064b18836110341fa7f1b875dd4",
+                        "files":  1530,
+                        "directory":  "pdfcraft"
+                    },
+                    {
+                        "name":  "photocraft",
+                        "repository":  "https://github.com/storytold/photocraft",
+                        "branch":  "main",
+                        "commit":  "1c3db2e5c35a4f8c544011e57c8026ccb9741926",
+                        "tree":  "1f098afedb77877aa5e03b08f46d38187f9acb68",
+                        "files":  2060,
+                        "directory":  "photocraft"
+                    },
+                    {
+                        "name":  "soundcraft",
+                        "repository":  "https://github.com/storytold/soundcraft",
+                        "branch":  "main",
+                        "commit":  "ef646cf6263e0a381b84170ef1d655455ef669e9",
+                        "tree":  "c9b4aef094e49e10200600dd288ff17346659a97",
+                        "files":  442,
+                        "directory":  "soundcraft"
+                    },
+                    {
+                        "name":  "vectorcraft",
+                        "repository":  "https://github.com/storytold/vectorcraft",
+                        "branch":  "main",
+                        "commit":  "4c82749b08575cec1e6a0fe2e2bca1ef157151e7",
+                        "tree":  "0cf2638ef878ea106fbc452a684e55f67a9e1e97",
+                        "files":  1891,
+                        "directory":  "vectorcraft"
+                    },
+                    {
+                        "name":  "wordcraft",
+                        "repository":  "https://github.com/storytold/wordcraft",
+                        "branch":  "main",
+                        "commit":  "c524027f34be2d1322b23064f80662d3638cf880",
+                        "tree":  "40d208b0010180ee3ddc3a670060f70740fc45d8",
+                        "files":  614,
+                        "directory":  "wordcraft"
+                    }
+                ]
+}
